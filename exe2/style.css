@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to right, #f1f3f8 20%, #d4ddea 80%);
+}
+#container {
+  width: 60%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin: auto;
+}
+header img {
+  max-width: 350px;
+  display: block;
+  margin: auto;
+  box-shadow: 2px 2px 5px 8px #ddcdf477;
+}
+header p {
+  text-align: center;
+  width: 80%;
+  margin: 25px auto;
+  line-height: 25px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.card {
+  display: grid;
+  grid-template-areas: "h3 checkbox garbage" "text text text";
+  grid-template-columns: 1fr 20px 50px;
+  grid-template-rows: 1fr 100%;
+  gap: 10px;
+  width: 100%;
+  /* background-color: #e7eeff9c;
+  border: 1px solid #5d73ec; */
+  border-radius: 20px;
+  padding: 25px 25px;
+}
+.card:hover {
+  background-color: #93a2f717;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.card:nth-child(1) {
+  background-color: #f1f0f9;
+  border: 1px solid #694492;
+}
+.card:nth-child(2) {
+  background-color: #fef1f8;
+  border: 1px solid #db5776;
+}
+.card:nth-child(3) {
+  background-color: #e7fcff;
+  border: 1px solid #04d5e4;
+}
+.card:nth-child(4) {
+  background-color: #ecfefa;
+  border: 1px solid #3bd275;
+}
+.card:nth-child(5) {
+  background-color: #fffaee;
+  border: 1px solid #e16b85;
+}
+.card h3 {
+  grid-area: h3;
+  color: #333;
+  font-size: 1.25rem;
+  align-self: center;
+  font-weight: 500;
+}
+input {
+  grid-area: checkbox;
+  width: 18px;
+  height: 18px;
+  justify-self: end;
+  align-self: center;
+}
+.card img {
+  grid-area: garbage;
+  width: 52px;
+  height: auto;
+  border: #ccc solid 2px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  justify-self: end;
+  align-self: center;
+  background-color: #f7f9ff9c;
+}
+.card img:hover {
+  background-color: #e74444;
+  border: 2px solid #d11d1d;
+}
+.card p {
+  grid-area: text;
+  font-size: 14px;
+  color: #888;
+  line-height: 1.5;
+}
+.card p::first-letter {
+  font-size: 2.3rem;
+  font-weight: bold;
+  float: inline-start;
+  line-height: normal;
+  color: #5eafb2;
+  padding-right: 4px;
+}
+.card:has(.checkbox:checked) {
+  background-color: #301927;
+}
+.checkbox:checked + h3 {
+  color: #f0f0f0;
+}

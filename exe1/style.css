@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+body {
+  background-color: #f5f5f5;
+  padding: 40px;
+  width: 100vw;
+  height: 100vh;
+}
+#container {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  padding: 40px;
+  background-color: #fafafa;
+  border-radius: 20px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+header a {
+  margin-right: 20px;
+  /* text-decoration-line: none; */
+}
+main h1 {
+  margin-top: 20px;
+}
+main label {
+  margin-top: 10px;
+}
+main input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+main input:invalid {
+  border-color: red;
+}
+p {
+  margin-bottom: 20px;
+}
+#try :first-child::first-line {
+  font-weight: bold;
+}
+#try :first-child:first-letter {
+  font-size: 25px;
+  color: blue;
+}
+#try :nth-child(2)::first-line {
+  font-style: italic;
+}
+#try :nth-child(2)::before, #try :nth-child(2)::after {
+    content: "\"";
+}
