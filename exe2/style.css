@@ -12,7 +12,6 @@ body {
 #container {
   width: 60%;
   padding: 20px;
-  border: 1px solid #ccc;
   margin: auto;
 }
 header img {
@@ -39,8 +38,6 @@ main {
   grid-template-rows: 1fr 100%;
   gap: 10px;
   width: 100%;
-  /* background-color: #e7eeff9c;
-  border: 1px solid #5d73ec; */
   border-radius: 20px;
   padding: 25px 25px;
 }
